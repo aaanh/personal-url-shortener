@@ -38,11 +38,13 @@ const Home: NextPage = (props: any) => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main className="p-4">
-        <h1>Welcome to {props.owner_first_name + `'s `}URL Shortener</h1>
-        <h2 className="pb-2">
+        <h1 className="text-2xl">
+          Welcome to {props.owner_first_name + `'s `}URL Shortener v0.1.0-alpha
+        </h1>
+        <p className="pb-2">
           Application is running at{" "}
           <span className="font-mono text-info">{host}</span>
-        </h2>
+        </p>
         <div className="flex space-x-2">
           <a className="btn-sm btn text-primary" href={props.owner_homepage}>
             <GrHome></GrHome>
@@ -70,13 +72,18 @@ const Home: NextPage = (props: any) => {
                   <tr key={idx}>
                     <td>{idx}</td>
                     <td>
-                      <a href={item.source}>
+                      <a className="link hover:link-accent" href={item.source}>
                         {host}
                         {item.source}
                       </a>
                     </td>
                     <td>
-                      <a href={item.destination}>{item.destination}</a>
+                      <a
+                        className="link hover:link-accent"
+                        href={item.destination}
+                      >
+                        {item.destination}
+                      </a>
                     </td>
                   </tr>
                 ))
@@ -89,6 +96,50 @@ const Home: NextPage = (props: any) => {
               )}
             </tbody>
           </table>
+        </div>
+        <div>
+          <h2 className="text-xl">What does it do?</h2>
+          <p>
+            This is a URL shortener. It takes a long URL and converts it into a
+            short URL. It is useful for sharing long URLs on social media or any
+            URLs for that matter.
+          </p>
+          <p>
+            Although, currently the shortening is done manually by adding K, V
+            pairs in the link database.
+          </p>
+          <br></br>
+          <h2 className="text-xl">What is it built on?</h2>
+          <p>
+            It is built using the Nextjs framework on top of React. The project
+            was generated using{" "}
+            <a
+              className="link"
+              href="https://github.com/t3-oss/create-t3-app"
+            >{`create-t3-app template`}</a>
+            .
+          </p>
+          <p>
+            The path name generation utilizes dynamic routing feature of Nextjs{" "}
+            <span className="font-mono text-primary">{`[pathname].js`}</span>.
+          </p>
+          <br></br>
+          <h2 className="pb-4 text-xl">Deploy your own</h2>
+          <a
+            className="btn border-0 bg-black normal-case text-white hover:bg-stone-900"
+            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Faaanh%2Fpersonal-url-shortener"
+          >
+            Deploy with Vercel
+          </a>
+          <p className="pt-4">
+            Make sure to fill in the environment variables afterwards according
+            to{" "}
+            <a
+              href="https://github.com/aaanh/personal-url-shortener/blob/master/.env.example"
+              className="font-mono text-primary"
+            >{`.env.example`}</a>{" "}
+            and also add those to the Vercel project settings.
+          </p>
         </div>
       </main>
     </>

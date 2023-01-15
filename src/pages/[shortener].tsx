@@ -22,13 +22,23 @@ export default function UrlRoute() {
   });
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      <span className="italic">
+    <div className="flex h-screen w-screen flex-col items-center justify-center space-y-4">
+      <div className="text-6xl italic">
         {urlRoutePairs.find((item) => item.source === shortener)?.destination
           ? `Redirecting to ` +
             urlRoutePairs.find((item) => item.source === shortener)?.destination
           : "Target not found in database. Redirecting to homepage."}
-      </span>
+      </div>
+      <div>
+        <a
+          className="btn-primary btn-sm btn"
+          href={
+            urlRoutePairs.find((item) => item.source === shortener)?.destination
+          }
+        >
+          Click here to redirect immediately.
+        </a>
+      </div>
     </div>
   );
 }
