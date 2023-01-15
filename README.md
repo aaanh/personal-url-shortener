@@ -14,8 +14,7 @@ pairs in the link database.
 It is built using the Nextjs framework on top of React. The project
 was generated using [create-t3-app template](https://github.com/t3-oss/create-t3-app).
 
-The path name generation utilizes dynamic routing feature of Nextjs{" "}
-`[pathname].js`.
+The path name generation utilizes dynamic routing feature of Nextjs `[pathname].js`.
 
 ## Deploy your own
 
