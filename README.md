@@ -1,28 +1,24 @@
-# Create T3 App
+# Personal Simple URL Shortener
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+## What does it do?
 
-## What's next? How do I make an app with this?
+This is a URL shortener. It takes a long URL and converts it into a
+short URL. It is useful for sharing long URLs on social media or any
+URLs for that matter.
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+Although, currently the shortening is done manually by adding K, V
+pairs in the link database.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## What is it built on?
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+It is built using the Nextjs framework on top of React. The project
+was generated using [create-t3-app template](https://github.com/t3-oss/create-t3-app).
 
-## Learn More
+The path name generation utilizes dynamic routing feature of Nextjs{" "}
+`[pathname].js`.
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## Deploy your own
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+[Deploy with Vercel](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Faaanh%2Fpersonal-url-shortener)
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+Make sure to fill in the environment variables afterwards according to [`.env.example`](https://github.com/aaanh/personal-url-shortener/blob/master/.env.example) and also add those to the Vercel project settings.
