@@ -1,4 +1,4 @@
-function createUrlRouting({ key = 0, source = "", destination = "" } = {}) {
+function createUrlRouting({ source = "", destination = "" } = {}) {
   return {
     source, // source pathname from your domain, e.g. shortener.me.sh/ggl
     destination, // full URL to redirect to, e.g. https://www.google.com

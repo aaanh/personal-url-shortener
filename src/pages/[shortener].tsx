@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import urlRoutePairs from "../db/url";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-const urlRoute = () => {
+export default function UrlRoute() {
   const router = useRouter();
   const { shortener } = router.query;
 
@@ -31,6 +31,4 @@ const urlRoute = () => {
       </span>
     </div>
   );
-};
-
-export default urlRoute;
+}
