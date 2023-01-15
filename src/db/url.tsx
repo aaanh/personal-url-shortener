@@ -1,5 +1,3 @@
-import { create } from "domain";
-
 function createUrlRouting({ key = 0, source = "", destination = "" } = {}) {
   return {
     source, // source pathname from your domain, e.g. shortener.me.sh/ggl
